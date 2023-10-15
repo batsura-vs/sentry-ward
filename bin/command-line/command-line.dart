@@ -129,7 +129,7 @@ class CommandLine {
               ])
     ]);
     final csvRowStream = stream.transform(ListToCsvConverter());
-    final output = File(arguments[outputFile]).openWrite();
+    final output = File("${arguments[outputFile]}.csv").openWrite();
     await for (var row in csvRowStream) {
       output.write(row);
     }
@@ -137,7 +137,7 @@ class CommandLine {
   }
 
   Future<void> saveAsJSON(List<ProxyDto> proxies) async {
-    final output = File(arguments[outputFile]).openWrite();
+    final output = File("${arguments[outputFile]}.json").openWrite();
     output.write(jsonEncode(proxies));
     await output.close();
   }

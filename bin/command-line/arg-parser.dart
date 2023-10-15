@@ -36,7 +36,7 @@ final parser = ArgParser()
     outputFile,
     abbr: 'o',
     help: "Output file name",
-    defaultsTo: "output.csv",
+    defaultsTo: "output",
   )
   ..addOption(
     outputFormat,
