@@ -1,0 +1,22 @@
+name: sentry_ward
+description: A sample command-line application.
+version: 1.0.0
+# repository: https://github.com/my_org/my_repo
+
+environment:
+  sdk: ^3.1.0
+
+# Add regular dependencies here.
+dependencies:
+  args: ^2.4.2
+  chalkdart: ^2.0.9
+  console: ^4.1.0
+  csv: ^5.0.2
+  dio: ^5.3.3
+  enough_ascii_art: ^1.1.0
+  semaphore_plus: ^0.3.1
+  # path: ^1.8.0
+
+dev_dependencies:
+  lints: ^2.0.0
+  test: ^1.21.0
