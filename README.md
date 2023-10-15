@@ -8,7 +8,7 @@
 \___jl_____jl__j__j   l__j  l__j\_jl____/       \_/\_/  l__j__jl__j\_jl_____j
 ```
 
-# Sentry Ward advanced proxy scanner
+# Sentry Ward advanced proxy checker
 
 ![Sentry Ward demo](./images/demo.gif)
 ***
