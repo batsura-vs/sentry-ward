@@ -30,7 +30,15 @@ class Serve {
       "\n${chalk.green("Total proxies")}: ${proxies.length}\n",
     );
     proxies = await validateAll(proxies);
-    await Server(proxyPool: proxies).run();
+    await Server(
+      proxyPool: proxies,
+      changeAfter: int.tryParse(arguments[rotateProxy]),
+    ).run(
+      address: InternetAddress(
+        arguments[host],
+      ),
+      port: int.tryParse(arguments[port]) ?? 8080,
+    );
     exit(0);
   }
 

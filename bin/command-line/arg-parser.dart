@@ -9,6 +9,9 @@ const String outputFormat = "outputFormat";
 const String concurrentRequests = "concurrentRequests";
 const String showErrors = "showErrors";
 const String serveRotatingProxy = "serveRotatingProxy";
+const String rotateProxy = "rotateProxy";
+const String host = "host";
+const String port = "port";
 
 final parser = ArgParser()
   ..addMultiOption(
@@ -70,4 +73,19 @@ final parser = ArgParser()
     help: "Serve rotating proxy",
     negatable: false,
     defaultsTo: false,
+  )
+  ..addOption(
+    rotateProxy,
+    help: "Rotate proxy after n requests [number]",
+    defaultsTo: "10",
+  )
+  ..addOption(
+    host,
+    help: "Rotating proxy server host",
+    defaultsTo: "0.0.0.0",
+  )
+  ..addOption(
+    port,
+    help: "Rotating proxy server port",
+    defaultsTo: "8080",
   );

@@ -9,8 +9,11 @@
 ```
 
 # Sentry Ward advanced proxy checker
-
+### Scanner DEMO
 ![Sentry Ward demo](./images/demo.gif)
+### Rotation Proxy Server
+![Sentry Ward demo](./images/demo2.gif)
+![Sentry Ward demo](./images/demo3.gif)
 ***
 
 ### Advanced proxy scanner written in pure Dart.
@@ -49,26 +52,26 @@ wget https://github.com/batsura-vs/sentry-ward/releases/download/sentry-ward/sen
 
 
 -r, --remote                Urls to remote proxy list [url1,url2,...]
-
 -l, --local                 Paths to proxy list [path1,path2,...]
---socketTimeout             Socket timeout [ms]
+    --socketTimeout         Socket timeout [ms]
                             (defaults to "2000")
-                            
---connectTimeout            Connect timeout [ms]
+    --connectTimeout        Connect timeout [ms]
                             (defaults to "5000")
-                            
 -o, --outputFile            Output file name
-                            (defaults to "output.csv")
-                            
+                            (defaults to "output")
 -f, --outputFormat          Output format: [json, csv]
                             (defaults to "csv")
-                            
 -h, --help                  Provide usage instruction
-
 -c, --concurrentRequests    Concurrent requests [number]
                             (defaults to "100")
-                            
 -e, --showErrors            Show errors
+-s, --serveRotatingProxy    Serve rotating proxy
+    --rotateProxy           Change proxy after n requests [number]
+                            (defaults to "10")
+    --host                  Rotating proxy server host
+                            (defaults to "0.0.0.0")
+    --port                  Rotating proxy server port
+                            (defaults to "8080")
 ````
 # Output example
 
