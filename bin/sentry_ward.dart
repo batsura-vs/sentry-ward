@@ -6,7 +6,6 @@ import 'command-line/arg-parser.dart';
 import 'command-line/command-line.dart';
 import 'command-line/helper.dart';
 import 'command-line/serve.dart';
-import 'server/serve/serve.dart';
 
 void main(List<String> arguments) async {
   ArgResults argResults = parser.parse(arguments);

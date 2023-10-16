@@ -66,12 +66,14 @@ wget https://github.com/batsura-vs/sentry-ward/releases/download/sentry-ward/sen
                             (defaults to "100")
 -e, --showErrors            Show errors
 -s, --serveRotatingProxy    Serve rotating proxy
-    --rotateProxy           Change proxy after n requests [number]
-                            (defaults to "10")
+    --rotateProxy           Rotate proxy after n requests [number]
     --host                  Rotating proxy server host
                             (defaults to "0.0.0.0")
     --port                  Rotating proxy server port
                             (defaults to "8080")
+-u, --updateTime            Update proxy list every n seconds (rotation server only)
+-t, --timeToChangeProxy     Time to change proxy (rotation server only)
+
 ````
 # Output example
 

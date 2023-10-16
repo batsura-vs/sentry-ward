@@ -12,6 +12,8 @@ const String serveRotatingProxy = "serveRotatingProxy";
 const String rotateProxy = "rotateProxy";
 const String host = "host";
 const String port = "port";
+const String updateTime = "updateTime";
+const String timeToChangeProxy = "timeToChangeProxy";
 
 final parser = ArgParser()
   ..addMultiOption(
@@ -77,7 +79,6 @@ final parser = ArgParser()
   ..addOption(
     rotateProxy,
     help: "Rotate proxy after n requests [number]",
-    defaultsTo: "10",
   )
   ..addOption(
     host,
@@ -88,4 +89,14 @@ final parser = ArgParser()
     port,
     help: "Rotating proxy server port",
     defaultsTo: "8080",
+  )
+  ..addOption(
+    updateTime,
+    help: "Update proxy list every n seconds (rotation server only)",
+    abbr: 'u',
+  )
+  ..addOption(
+    timeToChangeProxy,
+    help: "Time to change proxy (rotation server only)",
+    abbr: 't',
   );

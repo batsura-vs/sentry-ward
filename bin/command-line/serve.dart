@@ -16,6 +16,7 @@ class Serve {
   final RegExp proxyRe = RegExp(
     r"([0-9]{1,4}\.[0-9]{1,4}\.[0-9]{1,4}\.[0-9]{1,4}):([0-9]{1,5})",
   );
+  late final Fetcher fetcher;
 
   Serve({
     required this.arguments,
@@ -32,7 +33,10 @@ class Serve {
     proxies = await validateAll(proxies);
     await Server(
       proxyPool: proxies,
-      changeAfter: int.tryParse(arguments[rotateProxy]),
+      changeAfter: int.tryParse(arguments[rotateProxy] ?? ""),
+      fetcher: fetcher,
+      updateTime: int.tryParse(arguments[updateTime] ?? ""),
+      timeToChangeProxy: int.tryParse(arguments[timeToChangeProxy] ?? ""),
     ).run(
       address: InternetAddress(
         arguments[host],
@@ -84,7 +88,7 @@ class Serve {
   Future<List<ProxyDto>> fetchFromRemote() async {
     if (!arguments.wasParsed(remote)) return [];
     Console.eraseDisplay();
-    Fetcher fetcher = Fetcher(
+    fetcher = Fetcher(
       proxyLists: arguments[remote],
     );
     List<ProxyDto> proxies = await fetcher.fetchAll(
