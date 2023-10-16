@@ -8,6 +8,7 @@ const String outputFile = "outputFile";
 const String outputFormat = "outputFormat";
 const String concurrentRequests = "concurrentRequests";
 const String showErrors = "showErrors";
+const String serveRotatingProxy = "serveRotatingProxy";
 
 final parser = ArgParser()
   ..addMultiOption(
@@ -60,6 +61,13 @@ final parser = ArgParser()
     showErrors,
     abbr: 'e',
     help: "Show errors",
+    negatable: false,
+    defaultsTo: false,
+  )
+  ..addFlag(
+    serveRotatingProxy,
+    abbr: 's',
+    help: "Serve rotating proxy",
     negatable: false,
     defaultsTo: false,
   );

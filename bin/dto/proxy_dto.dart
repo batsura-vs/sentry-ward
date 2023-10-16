@@ -34,4 +34,9 @@ class ProxyDto {
       'ipInfo': ipInfo?.toJson(),
     };
   }
+
+  @override
+  String toString() {
+    return '$host:$port';
+  }
 }
