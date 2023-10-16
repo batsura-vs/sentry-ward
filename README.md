@@ -5,7 +5,7 @@
 \__  TY    _]|  |  |l_j  l_j|    / |  ~  |    |  |  |  ||     ||    / |  D  Y
 /  \ ||   [_ |  |  |  |  |  |    \ l___, |    l  `  '  !|  _  ||    \ |     |
 \    ||     T|  |  |  |  |  |  .  Y|     !     \      / |  |  ||  .  Y|     |
-\___jl_____jl__j__j   l__j  l__j\_jl____/       \_/\_/  l__j__jl__j\_jl_____j
+ \___jl_____jl__j__j  l__j  l__j\_jl____/       \_/\_/  l__j__jl__j\_jl_____j
 ```
 
 # Sentry Ward advanced proxy checker
@@ -48,7 +48,7 @@ wget https://github.com/batsura-vs/sentry-ward/releases/download/sentry-ward/sen
 \__  TY    _]|  |  |l_j  l_j|    / |  ~  |    |  |  |  ||     ||    / |  D  Y
 /  \ ||   [_ |  |  |  |  |  |    \ l___, |    l  `  '  !|  _  ||    \ |     |
 \    ||     T|  |  |  |  |  |  .  Y|     !     \      / |  |  ||  .  Y|     |
-\___jl_____jl__j__j   l__j  l__j\_jl____/       \_/\_/  l__j__jl__j\_jl_____j
+ \___jl_____jl__j__j  l__j  l__j\_jl____/       \_/\_/  l__j__jl__j\_jl_____j
 
 
 -r, --remote                Urls to remote proxy list [url1,url2,...]
