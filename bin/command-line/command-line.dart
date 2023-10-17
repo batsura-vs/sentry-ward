@@ -40,7 +40,7 @@ class CommandLine {
   }
 
   Future<List<ProxyDto>> getFromLocal(List<String> paths) async {
-    List<ProxyDto> proxies = [];
+    Set<ProxyDto> proxies = {};
     for (final path in paths) {
       String data = File(path).readAsStringSync();
       List matches = proxyRe.allMatches(data).toList();
@@ -52,7 +52,7 @@ class CommandLine {
         ));
       }
     }
-    return proxies;
+    return proxies.toList();
   }
 
   Future<List<ProxyDto>> validateAll(List<ProxyDto> proxies) async {
