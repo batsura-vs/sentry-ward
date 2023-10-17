@@ -18,7 +18,7 @@ class Fetcher {
   });
 
   Future<List<ProxyDto>> fetchAll({Function(String, int)? onProgress}) async {
-    List<ProxyDto> proxies = [];
+    Set<ProxyDto> proxies = {};
     for (final proxy in proxyLists) {
       List<ProxyDto>? proxiesFromOne =
           await _fetchOne(proxy).onError((error, stackTrace) => null);
@@ -26,7 +26,7 @@ class Fetcher {
       if (proxiesFromOne == null) continue;
       proxies.addAll(proxiesFromOne);
     }
-    return proxies;
+    return proxies.toList();
   }
 
   Future<List<ProxyDto>?> _fetchOne(String resource) async {
