@@ -67,7 +67,6 @@ class Server {
     clientSocket.done.whenComplete(() => clientSocket.destroy());
     Socket simpleSocket = await Socket.connect(proxy.host, proxy.port)
         .onError((error, stackTrace) {
-      cursor++;
       throw Exception("Cant connect to proxy");
     });
     simpleSocket.done.whenComplete(() => clientSocket.destroy());
